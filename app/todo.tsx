@@ -15,6 +15,9 @@ export default function TodoComponent({ todo }: { todo: Todo }) {
         completed: !todo.completed,
         id: todo.id,
       }),
+      next: {
+        revalidate: 0,
+      },
     });
     router.refresh();
   };
